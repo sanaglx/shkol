@@ -132,13 +132,13 @@ if( ww < 1920 && ww > 1600){var np = 600;}
 else if( ww < 1600 && ww > 1200){var np = 400;}
 else if( ww < 1200 ){var np = -400;}
 var st = $(this).scrollTop();
-console.log(st + "|" + np)
+//console.log(st + "|" + np)
 scrollPos = (st+np) /3 * -1;
 $('.fon-x').css('top',scrollPos)
 
 $(window).scroll(function(){
    var st = $(this).scrollTop();
-   console.log(st + "|" + np)
+   //console.log(st + "|" + np)
    if (st > scrollPos){
      $('#result').html('Вниз');
      //console.log(st)
@@ -163,6 +163,13 @@ $('.hpala').click(function(){
     }
 
 })
+
+AOS.init({
+    disable: function () {
+      var maxWidth = 768;
+      return window.innerWidth < maxWidth;
+    }
+  });
 
 
 

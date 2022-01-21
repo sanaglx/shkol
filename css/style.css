@@ -159,7 +159,7 @@ a:hover {
   color: #ffffff;
   background: #1d4f95;
   border-radius: 19px;
-  padding: 6px 2% 8px;
+  padding: 6px 2.5% 9px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -456,9 +456,6 @@ input.text {
   -webkit-box-flex: 1;
       -ms-flex: 1 100%;
           flex: 1 100%;
-  width: 100%;
-  height: 100%;
-  margin-bottom: -4px;
 }
 
 .block-rf-img img {
@@ -467,7 +464,7 @@ input.text {
   border-radius: 19px;
   overflow: hidden;
   width: 100%;
-  height: calc(100% - 4px);
+  height: 100%;
 }
 
 .str-l {
@@ -1060,24 +1057,38 @@ input.text {
   border-radius: 19px;
 }
 
-.owl-news .owl-nav {
-  position: absolute;
-  max-width: 1196px;
-  z-index: 10;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .owl-news .owl-nav img {
   height: 100px;
 }
 
 .owl-news .owl-next {
+  color: inherit;
+  border: none;
+  font: inherit;
+  z-index: 10;
   position: absolute;
-  right: 0;
+  right: 50%;
+  top: 50%;
+  -webkit-transform: translate(820%, -50%);
+          transform: translate(820%, -50%);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.owl-news .owl-prev {
+  color: inherit;
+  border: none;
+  font: inherit;
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-860%, -50%);
+          transform: translate(-860%, -50%);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .owl-full {
@@ -1131,6 +1142,19 @@ input.text {
 
 .owl-full .owl-dots .owl-dot.active {
   background: var(--blue);
+}
+
+@media (max-width: 1200px) {
+  .owl-news .owl-next {
+    right: 1%;
+    -webkit-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+  }
+  .owl-news .owl-prev {
+    left: 1%;
+    -webkit-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+  }
 }
 
 @media (max-width: 1199px) {
