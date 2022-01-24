@@ -18,6 +18,12 @@
     }
   
   }
+
+  @media (max-width:1090px) {
+    .block-rf ,
+    .block-rf.mh337 {max-height: inherit;}
+
+  }
   
   @media (max-width:991px) {
     .logo {margin-bottom: 16px;}
@@ -50,7 +56,7 @@
     #map{
        height: 600px;
       }
-
+      .footer .bt-lin { margin-top: 12px; }  
   }
   
   @media (max-width:767px) {
@@ -79,6 +85,10 @@
         bottom: 12px;
         left: 15px;
     }
+    .summa-item{
+        min-height: initial;
+    }
+
   }
 
   .nav-mobi{display: none;}
@@ -206,6 +216,10 @@
     #map{
         height: 350px;
        }
+       .block-blue,.title2{
+           font-size: 17px;
+       } 
+       .block-rf-text__h4{font-size: 18px;} 
   }
 
   @media (max-width:383px) {

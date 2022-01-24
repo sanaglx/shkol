@@ -6,7 +6,7 @@
   --red: #f55;
 }
 ul{
-  line-height: 1.7;
+  line-height: 1.55;
   font-weight: 300;
   font-size: 15px;
   margin: 0 0 0 20px;
@@ -76,6 +76,10 @@ body {
   display: flex;
   background: #f3f3f5;
   border-radius: 19px;
+  max-height: 325px;
+  &.mh337{
+    max-height: 340px; 
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -95,13 +99,13 @@ body {
   &__h4 {
     font-weight: 900;
     font-size: 21px;
-    line-height: 25px;
+    line-height: 27px;
   }
 }
 
 .block-lf-text {
   padding: 16px 24px 24px 40px;
-  flex: 0 calc(100% - 64px);
+  flex: 0 calc(100% + 22px);
   .ul-full {
     list-style: initial;
     margin-left: 20px;
@@ -148,7 +152,7 @@ body {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 18px;
   input {
     width: 160px;
     padding-left: 16px;
@@ -167,6 +171,14 @@ body {
   border-radius: 0;
   padding: 45px 0 85px;
 }
+.block-fill2 {
+  border-radius: 0;
+  padding: 42px 0 69px;
+}
+.block-fill3 {
+  border-radius: 0;
+  padding: 90px 0 73px;
+}
 .block-gr {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -174,7 +186,7 @@ body {
 }
 
 .block-gr-item {
-  padding: 35px;
+  padding: 11px 35px 20px; 
   background: #feffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 19px;
@@ -194,6 +206,7 @@ body {
   line-height: 28px;
   color: #1d4f95;
   margin-bottom: 16px;
+  span{display: block;}
 }
 .block-gr-item__text {
   font-weight: 300;
@@ -205,7 +218,7 @@ body {
   background: #1d4f95;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 19px;
-  padding: 30px;
+  padding: 26px;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
@@ -351,19 +364,21 @@ body {
 
 .footer {
   background: #1d4f95;
+  background: url(../img/footer.jpg) center no-repeat;
+  background-size: cover;
   mix-blend-mode: normal;
   width: 100%;
   min-height: 214px;
   color: #fff;
-  padding: 27px 0;
+  padding: 23px 0 10px;
   .row2 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
   a {
     display: inline-block;
     font-size: 15px;
-    line-height: 1.7;
-    padding: 3px 0;
+    line-height: 1.45;
+    padding: 2px 0;
     color: #fff;
     font-weight: 300;
     &:hover {
@@ -400,12 +415,18 @@ body {
     }
   }
   .bt-lin {
-    margin-top: 30px;
+    margin-top: -5px;
   }
+}
+
+.block-karta{
+  max-height: 598px;
+  overflow: hidden;
 }
 
 /*******page**************/
 
+.no-list li{line-height: 1.8;} 
 .page {
   background: url(../img/header-bkg.jpg) center no-repeat;
   background-size: cover;
@@ -416,7 +437,7 @@ body {
   .header {
     position: static;
     transform: translate(0, 0);
-    max-width: 1200px;
+    max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -485,7 +506,7 @@ body {
 }
 
 .summa {
-  padding: 50px 0;
+  padding:30px 0 50px 0;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -496,6 +517,9 @@ body {
 .summa-item {
     display: flex;
     flex-direction: column;
+    min-height: 219px;
+    justify-content: end;
+    min-width: 88px;
 		&_title {
       font-weight: 500;
       font-size: 24px;
@@ -509,6 +533,7 @@ body {
       align-items: center;
       justify-content: center;
       margin-bottom: 40px;
+      flex:1;
     }
 
 		&__zn {
@@ -520,6 +545,8 @@ body {
       padding: 0 23px;
     }
 }
+
+.blur .block{background: transparent;}
 
 .cena_blue{
   font-weight: 500;
@@ -564,6 +591,10 @@ body {
 .modal.active{
   display: block;
 }
+
+.mr3p{margin-right: 3%;}
+.mr6p{margin-right: 6%;}
+.mr4p{margin-right: 4%;}
 
 @import "carousel";
 @import "media";
