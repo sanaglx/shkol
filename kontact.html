@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div class="teni"></div>
   <div class="nav-mobi">
     <div class="nav-mobi-h">
       <div class="nav-btn-x">
@@ -80,34 +81,34 @@
     <div class="container">
       <h1 class="h1b br19 mb64">КОНТАКТЫ</h1>
     </div>
-    <div class="block-karta" >
-     <div id='map' ></div>   
-        <div class="karta-unfo blur">
-          <div class="adres block-karta-item ">
-            <div class="karta_title h1b">АДРЕС</div>
-            <div class="karta__text">
-              г. Долгопрудный, Старое Дмитровское ш.,<br>
-              дом 15, корпус 2
-            </div>
-          </div>
-          <div class="telf block-karta-item">
-            <div class="karta_title h1b">ТЕЛЕФОН и EMAIL</div>
-            <div class="karta__text">
-              <a href="tel:74955792599">Тел.: +7 495 579-25-99</a>
-              <a href="mailto:info@ilovelps.ru">e-mail: info@ilovelps.ru</a>
-            </div>
-          </div>
-          <div class="time block-karta-item">
-            <div class="karta_title h1b">ВРЕМЯ РАБОТЫ</div>
-            <div class="karta__text">
-              с Пн по Пт с 07:30 до 20:00 <br>
-              Сб, Вс выходные
-            </div>
+    <div class="block-karta">
+      
+      <div class="karta-unfo blur">
+        <div class="adres block-karta-item ">
+          <div class="karta_title h1b">АДРЕС</div>
+          <div class="karta__text">
+            г. Долгопрудный, Старое Дмитровское ш.,<br>
+            дом 15, корпус 2
           </div>
         </div>
-        
+        <div class="telf block-karta-item">
+          <div class="karta_title h1b">ТЕЛЕФОН и EMAIL</div>
+          <div class="karta__text">
+            <a href="tel:74955792599">Тел.: +7 495 579-25-99</a>
+            <a href="mailto:info@ilovelps.ru">e-mail: info@ilovelps.ru</a>
+          </div>
+        </div>
+        <div class="time block-karta-item">
+          <div class="karta_title h1b">ВРЕМЯ РАБОТЫ</div>
+          <div class="karta__text">
+            с Пн по Пт с 07:30 до 20:00 <br>
+            Сб, Вс выходные
+          </div>
+        </div>
       </div>
-      
+      <div id='map'></div>
+    </div>
+
   </main>
   <footer class="footer">
     <div class="container">
@@ -167,44 +168,44 @@
 
   <script>
     ymaps.ready(init);
-    
-    function init () {
-        var myMap = new ymaps.Map("map", {
-            // Координаты центра карты
-            center:[55.962190568761244,37.52750749999996],
-            // Масштаб карты
-            zoom: 16,
-            // Выключаем все управление картой
-            controls: []
-        }); 
-                
-        var myGeoObjects = [];
-        
-        // Указываем координаты метки
-        myGeoObjects = new ymaps.Placemark([55.962190568761244,37.52750749999996],{
-                        balloonContentBody: 'Частная школа',
-                        },{
-                        iconLayout: 'default#image',
-                        // Путь до нашей картинки
-                        iconImageHref: '/img/logo.png', 
-                        // Размеры иконки
-                        iconImageSize: [80, 70],
-                        // Смещение верхнего угла относительно основания иконки
-                        iconImageOffset: [-35, -35]
-        });
-                    
-        var clusterer = new ymaps.Clusterer({
-            clusterDisableClickZoom: false,
-            clusterOpenBalloonOnClick: false,
-        });
-        
-        clusterer.add(myGeoObjects);
-        myMap.geoObjects.add(clusterer);
-        // Отключим zoom
-        myMap.behaviors.disable('scrollZoom');
-    
+
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты
+        center: [55.962190568761244, 37.52750749999996],
+        // Масштаб карты
+        zoom: 16,
+        // Выключаем все управление картой
+        controls: []
+      });
+
+      var myGeoObjects = [];
+
+      // Указываем координаты метки
+      myGeoObjects = new ymaps.Placemark([55.962190568761244, 37.52750749999996], {
+        balloonContentBody: 'Частная школа',
+      }, {
+        iconLayout: 'default#image',
+        // Путь до нашей картинки
+        iconImageHref: '/img/logo.png',
+        // Размеры иконки
+        iconImageSize: [80, 70],
+        // Смещение верхнего угла относительно основания иконки
+        iconImageOffset: [-35, -35]
+      });
+
+      var clusterer = new ymaps.Clusterer({
+        clusterDisableClickZoom: false,
+        clusterOpenBalloonOnClick: false,
+      });
+
+      clusterer.add(myGeoObjects);
+      myMap.geoObjects.add(clusterer);
+      // Отключим zoom
+      myMap.behaviors.disable('scrollZoom');
+
     }
-    </script>
+  </script>
 
 
 </body>

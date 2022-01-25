@@ -114,9 +114,11 @@ $("#modalx").click(function (){
      var a = $(".modal-1");
      if(!$(a).hasClass('active')){
          $(a).addClass('active');
+         $('.teni').addClass('active');
          return false;
      }else{
          $(a).removeClass('active');
+         $('.teni').removeClass('active');
          return false;
      }
      return false
@@ -126,16 +128,24 @@ $("#modal-1").click(function (){
     var a = $(".modal-1");
     if(!$(a).hasClass('active')){
         $(a).addClass('active');
+        $('.teni').addClass('active');
         return false;
     }else{
         $(a).removeClass('active');
+        $('.teni').removeClass('active');
         return false;
     }
     return false
 })
 
+$(".teni").click(function (){
+    $('.modal').removeClass('active');
+    $('.teni').removeClass('active');   
+})
+
 $(".close").click(function () {
     $(this).parents('.modal').removeClass('active');
+    $('.teni').removeClass('active');
     return false
 })
 

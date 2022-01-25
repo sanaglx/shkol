@@ -161,6 +161,21 @@ main {
   padding: 40px 24px 60px;
 }
 
+.teni {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 80;
+  display: none;
+}
+
+.teni.active {
+  display: block;
+}
+
 .br19 {
   background-repeat: 19px;
   overflow: hidden;
