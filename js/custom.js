@@ -143,7 +143,7 @@ $(".close").click(function () {
 var scrollPos = 0;
 var ww = $(window).width();
 
-if( ww < 1920 && ww > 1600){var np = 600;}
+if( ww < 1920 && ww > 1600){var np = 1800;}
 else if( ww < 1600 && ww > 1200){var np = 400;}
 else if( ww < 1200 ){var np = -400;}
 var st = $(this).scrollTop();
