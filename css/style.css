@@ -873,6 +873,7 @@ input.text {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 10;
 }
 
 .karta__text {
@@ -1497,12 +1498,22 @@ input.text {
     font-size: 17px;
     padding: 6px 5% 8px;
   }
+  .block-karta {
+    max-height: initial;
+  }
   .karta-unfo {
     position: static;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
     margin: 0 auto 24px;
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* display: none;*/
+  }
+  .block-karta-item {
+    margin-bottom: 16px;
   }
   .summa {
     -webkit-box-orient: vertical;

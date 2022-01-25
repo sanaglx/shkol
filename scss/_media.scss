@@ -71,9 +71,14 @@
     .h1b{font-size: 18px;line-height: 1.4;}
     .btn{font-size: 17px;padding: 6px 5% 8px;}
 
+    .block-karta{max-height: initial;}
     .karta-unfo{position: static;transform: translate(0, 0);
         margin: 0 auto 24px;
-        display: none;
+        flex-direction: column;
+       /* display: none;*/
+    }
+    .block-karta-item{
+        margin-bottom: 16px;
     }
     .summa{flex-direction: column;align-items: center;}
     main {min-height: initial;}
