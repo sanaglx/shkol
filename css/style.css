@@ -251,7 +251,7 @@ input.text {
   line-height: 30px;
   color: #ffffff;
   font-weight: 900;
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .h1 {
@@ -987,7 +987,7 @@ input.text {
 
 .block-karta {
   max-height: 598px;
-  overflow: hidden;
+  /* overflow: hidden;*/
 }
 
 /*******page**************/
