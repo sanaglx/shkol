@@ -1,3 +1,5 @@
 img/
 fonts/
 node_modules/
+arx/
+*.json
