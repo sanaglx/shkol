@@ -1,6 +1,6 @@
 @import "fonts";
 :root {
-  --hover: #e7551a;
+  --hover: #ee936e;
   /* --hover:#f0b90d;*/
   --blue: #1d4f95;
   --red: #f55;
@@ -70,6 +70,19 @@ body {
   backdrop-filter: blur(9px);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 19px;
+}
+
+.blur-5{
+  position: absolute;
+  top: 0;left: 0;width: 100%;height: 100%;
+  background: rgba(255,255,255,0.7);
+  z-index: -1;
+}
+.blur-svg{
+/*width:367px; max-height:459px;*/
+	filter: url(../img/ico/blur.svg#blur);
+	-webkit-filter: blur(9px);
+	filter: blur(9px);
 }
 
 .block-rf {
@@ -345,7 +358,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-}
+ }
+
 .karta__text {
   font-weight: 300;
   font-size: 15px;
@@ -357,6 +371,10 @@ body {
 .karta {
   width: 100%;
   overflow: hidden;
+}
+
+#map{
+  height: 598px;
 }
 
 .footer-fl {
@@ -421,8 +439,13 @@ body {
 }
 
 .block-karta{
-  max-height: 598px;
- /* overflow: hidden;*/
+
+}
+.class-824 #map{
+  height: 824px;
+}
+.modal .block{
+  position: relative;
 }
 
 /*******page**************/

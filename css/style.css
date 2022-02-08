@@ -40,7 +40,7 @@
 }
 
 :root {
-  --hover: #e7551a;
+  --hover: #ee936e;
   /* --hover:#f0b90d;*/
   --blue: #1d4f95;
   --red: #f55;
@@ -252,6 +252,7 @@ input.text {
   color: #ffffff;
   font-weight: 900;
   padding: 5px 0;
+  text-transform: uppercase;
 }
 
 .h1 {
@@ -261,6 +262,15 @@ input.text {
   line-height: 28px;
   color: #ffffff;
   padding: 5px;
+  text-transform: uppercase;
+}
+
+.ymaps-2-1-79-inner-panes {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
 }
 
 .header {
@@ -528,6 +538,23 @@ input.text {
           backdrop-filter: blur(9px);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 19px;
+}
+
+.blur-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+
+.blur-svg {
+  /*width:367px; max-height:459px;*/
+  filter: url(../img/ico/blur.svg#blur);
+  -webkit-filter: blur(9px);
+  filter: blur(9px);
 }
 
 .block-rf {
@@ -824,7 +851,6 @@ input.text {
   top: 0;
   height: 324px;
   width: 50%;
-  background: url(../img/im1.jpg) top no-repeat;
   background-size: cover;
   border-top-left-radius: 19px;
   border-bottom-left-radius: 19px;
@@ -906,6 +932,10 @@ input.text {
   overflow: hidden;
 }
 
+#map {
+  height: 598px;
+}
+
 .footer-fl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -981,13 +1011,20 @@ input.text {
   margin-right: 30px;
 }
 
+.footer .soc a:hover{
+	opacity:0.8;
+}
+
 .footer .bt-lin {
   margin-top: -5px;
 }
 
-.block-karta {
-  max-height: 598px;
-  /* overflow: hidden;*/
+.class-824 #map {
+  height: 824px;
+}
+
+.modal .block {
+  position: relative;
 }
 
 /*******page**************/
@@ -1632,6 +1669,7 @@ input.text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 40px;
   }
   .nav-mobi-h .tel-mini {
     margin-right: 12px;
@@ -1844,6 +1882,10 @@ input.text {
   .block-blue {
     font-size: 17px;
   }
+}
+
+.logo:hover{
+	opacity:0.8;
 }
 
 /* @import 'paralax1';*/
