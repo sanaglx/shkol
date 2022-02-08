@@ -1378,7 +1378,7 @@ input.text {
 
 @media (max-width: 1199px) {
   .container, .header {
-    padding: 0 15px;
+    margin: 0 15px;
   }
   .block-gr {
     grid-gap: 40px;
@@ -1633,7 +1633,7 @@ input.text {
   .nav-mobi {
     display: block;
     background: #1D4F95;
-    padding: 3px 15px;
+    padding: 8px 15px 4px;
     position: fixed;
     top: 0px;
     z-index: 100;
@@ -1678,7 +1678,7 @@ input.text {
     margin: 0;
   }
   .nav-mobi-h .logo img {
-    width: 32px;
+    width: 48px;
   }
   .hpala {
     width: 26px;
